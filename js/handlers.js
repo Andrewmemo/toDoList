@@ -81,7 +81,6 @@ function editButtonHandler() {
 }
 
 function informationButtonHandler(event) {
-	console.log('lalal');
 	let taskElement = this.parentNode.parentNode;
 
 	let taskId = taskElement.dataset.id;
@@ -89,9 +88,6 @@ function informationButtonHandler(event) {
 	let task = JSON.parse(localStorage.getItem(taskId));
 
 	event.target.setAttribute('data-content', `${task['datepicker']}`);
-	$(document).ready(function(){
-	  // $('[data-toggle="popover"]').popover();
-	});
 
 }
 
